@@ -1,0 +1,188 @@
+\hypertarget{robot_8cpp}{}\doxysection{robot.\+cpp File Reference}
+\label{robot_8cpp}\index{robot.cpp@{robot.cpp}}
+
+
+This file contains a C++ program which represents the robot executing its behaviours based on these tasks (1.\+Autonomously reach a User entering Co-\/ordinates X and Y and, 2. Control or Move the robot using keyboard keys.)  
+
+
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$chrono$>$}\newline
+{\ttfamily \#include \char`\"{}ros/ros.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}geometry\+\_\+msgs/\+Twist.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sensor\+\_\+msgs/\+Laser\+Scan.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}actionlib\+\_\+msgs/\+Goal\+I\+D.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}move\+\_\+base\+\_\+msgs/\+Move\+Base\+Action\+Goal.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}move\+\_\+base\+\_\+msgs/\+Move\+Base\+Action\+Feedback.\+h\char`\"{}}\newline
+Include dependency graph for robot.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{robot_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{robot_8cpp_ab8a17bd7aebfe396839620a814ec3e4d}\label{robot_8cpp_ab8a17bd7aebfe396839620a814ec3e4d}} 
+\#define {\bfseries D\+I\+ST}~0.\+30
+\item 
+\mbox{\Hypertarget{robot_8cpp_a37f19123b1bf294dc694a2f59a9c28b7}\label{robot_8cpp_a37f19123b1bf294dc694a2f59a9c28b7}} 
+\#define {\bfseries P\+O\+S\+\_\+\+E\+R\+R\+OR}~0.\+5
+\item 
+\mbox{\Hypertarget{robot_8cpp_a5320d4457a472d8888ec1905bc0e0a1c}\label{robot_8cpp_a5320d4457a472d8888ec1905bc0e0a1c}} 
+\#define {\bfseries M\+A\+X\+\_\+\+T\+I\+ME}~100000000
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{robot_8cpp_ac5ca9aa62d70a5fb089b2a377e1bd282}{take\+\_\+the\+\_\+wheel}} ()
+\begin{DoxyCompactList}\small\item\em T\+A\+KE T\+HE W\+H\+E\+EL -\/ manual control with enable/disable option of driving assistance. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{robot_8cpp_a6a1415673ea23157efdcc7787a722e41}{assistance}} (const sensor\+\_\+msgs\+::\+Laser\+Scan\+::\+Const\+Ptr \&msg)
+\begin{DoxyCompactList}\small\item\em Assistance -\/ robot can be able to scan the path using the laser scan. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{robot_8cpp_adb56cf48e74e2603b6206502c1b99391}{initial\+\_\+position}} (const move\+\_\+base\+\_\+msgs\+::\+Move\+Base\+Action\+Feedback\+::\+Const\+Ptr \&msg)
+\begin{DoxyCompactList}\small\item\em initial position of the robot. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{robot_8cpp_ab013442fae1eec9b26c422a8bd8c535d}{initial\+\_\+goal}} (const move\+\_\+base\+\_\+msgs\+::\+Move\+Base\+Action\+Goal\+::\+Const\+Ptr \&msg)
+\begin{DoxyCompactList}\small\item\em I\+N\+I\+T\+I\+AL G\+O\+AL. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{robot_8cpp_a6548943dc3a7a07dba51b4a4e8a8a2b4}\label{robot_8cpp_a6548943dc3a7a07dba51b4a4e8a8a2b4}} 
+void \mbox{\hyperlink{robot_8cpp_a6548943dc3a7a07dba51b4a4e8a8a2b4}{ui}} ()
+\begin{DoxyCompactList}\small\item\em UI. ui -\/ This is the function used to receive the choice of an action the user want the the robot to operate by pressing respective keys for corresponding operations. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{robot_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}\label{robot_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}} 
+int {\bfseries main} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{robot_8cpp_ade99baad604daed9de810ac3cf5da418}\label{robot_8cpp_ade99baad604daed9de810ac3cf5da418}} 
+ros\+::\+Publisher \mbox{\hyperlink{robot_8cpp_ade99baad604daed9de810ac3cf5da418}{pub1}}
+\begin{DoxyCompactList}\small\item\em Publishes the Move Base Action Goal for the robot to reach the goal for the given coordinates. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{robot_8cpp_a2bef9e72d62d7ea1be803444f1ca7a6b}\label{robot_8cpp_a2bef9e72d62d7ea1be803444f1ca7a6b}} 
+ros\+::\+Publisher \mbox{\hyperlink{robot_8cpp_a2bef9e72d62d7ea1be803444f1ca7a6b}{pub2}}
+\begin{DoxyCompactList}\small\item\em Publishes the Move Base cancel Goal for the robot to avoid the robot movement beyond the environment. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{robot_8cpp_a0e8d412fdaada4745c72680b946d90a5}\label{robot_8cpp_a0e8d412fdaada4745c72680b946d90a5}} 
+ros\+::\+Publisher \mbox{\hyperlink{robot_8cpp_a0e8d412fdaada4745c72680b946d90a5}{pub3}}
+\begin{DoxyCompactList}\small\item\em Publishes the command the velocity for the robot ~\newline
+ \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{robot_8cpp_ab5709d4a8e0050f7486343dd6a8f0a64}\label{robot_8cpp_ab5709d4a8e0050f7486343dd6a8f0a64}} 
+float {\bfseries vel\+\_\+linear} = 0.\+0
+\item 
+\mbox{\Hypertarget{robot_8cpp_aa9c6b8a75beba5462d689099c1077861}\label{robot_8cpp_aa9c6b8a75beba5462d689099c1077861}} 
+float \mbox{\hyperlink{robot_8cpp_aa9c6b8a75beba5462d689099c1077861}{vel\+\_\+angular}} = 0.\+0
+\begin{DoxyCompactList}\small\item\em linear velocity of the robot \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{robot_8cpp_a38deedb02dcebac366f97a0879b3be5b}\label{robot_8cpp_a38deedb02dcebac366f97a0879b3be5b}} 
+char \mbox{\hyperlink{robot_8cpp_a38deedb02dcebac366f97a0879b3be5b}{input}}
+\begin{DoxyCompactList}\small\item\em angular velocity of the robot \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{robot_8cpp_afebdff54803773ef82da27104ee30b8a}\label{robot_8cpp_afebdff54803773ef82da27104ee30b8a}} 
+int \mbox{\hyperlink{robot_8cpp_afebdff54803773ef82da27104ee30b8a}{flag1}} = 0
+\begin{DoxyCompactList}\small\item\em user input on the key board \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{robot_8cpp_af1160951f4f1ab70e7f8d875d1b93df6}\label{robot_8cpp_af1160951f4f1ab70e7f8d875d1b93df6}} 
+int \mbox{\hyperlink{robot_8cpp_af1160951f4f1ab70e7f8d875d1b93df6}{flag2}} = 0
+\begin{DoxyCompactList}\small\item\em assistance enable/diable \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{robot_8cpp_a39758d42d41fc605725e59be4766bde5}\label{robot_8cpp_a39758d42d41fc605725e59be4766bde5}} 
+int \mbox{\hyperlink{robot_8cpp_a39758d42d41fc605725e59be4766bde5}{flag3}} = 0
+\begin{DoxyCompactList}\small\item\em time taken after current goal request \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{robot_8cpp_a5c158f2f1a427f3d4d671ccbf20ece7a}\label{robot_8cpp_a5c158f2f1a427f3d4d671ccbf20ece7a}} 
+int {\bfseries flag4} = 0
+\item 
+\mbox{\Hypertarget{robot_8cpp_a22d4ec3074b5dbbbc8a2225b7b23eead}\label{robot_8cpp_a22d4ec3074b5dbbbc8a2225b7b23eead}} 
+int {\bfseries counter1} = 10
+\item 
+\mbox{\Hypertarget{robot_8cpp_a4a83c833d1791f6e48fd7b0537ca23ec}\label{robot_8cpp_a4a83c833d1791f6e48fd7b0537ca23ec}} 
+int {\bfseries counter2}
+\item 
+\mbox{\Hypertarget{robot_8cpp_a8e4465da788ad9bc823a74042f2aa2ed}\label{robot_8cpp_a8e4465da788ad9bc823a74042f2aa2ed}} 
+float {\bfseries x\+\_\+co\+\_\+ord}
+\item 
+\mbox{\Hypertarget{robot_8cpp_a5d12c2796adce9619ac72bb4cd9a7dfe}\label{robot_8cpp_a5d12c2796adce9619ac72bb4cd9a7dfe}} 
+float \mbox{\hyperlink{robot_8cpp_a5d12c2796adce9619ac72bb4cd9a7dfe}{y\+\_\+co\+\_\+ord}}
+\begin{DoxyCompactList}\small\item\em x coordinate of the current goal \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{robot_8cpp_afd0d68c6d31ff249f3ae8662162663c3}\label{robot_8cpp_afd0d68c6d31ff249f3ae8662162663c3}} 
+std\+::string \mbox{\hyperlink{robot_8cpp_afd0d68c6d31ff249f3ae8662162663c3}{id}} = \char`\"{}\char`\"{}
+\begin{DoxyCompactList}\small\item\em y coordinate of the current goal \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{robot_8cpp_a56dfe2d1d81baf89618ad0eea48492dd}\label{robot_8cpp_a56dfe2d1d81baf89618ad0eea48492dd}} 
+std\+::chrono\+::high\+\_\+resolution\+\_\+clock\+::time\+\_\+point {\bfseries t\+\_\+start}
+\item 
+\mbox{\Hypertarget{robot_8cpp_af809b6c0c27825d8deb9f5cdbd0709db}\label{robot_8cpp_af809b6c0c27825d8deb9f5cdbd0709db}} 
+std\+::chrono\+::high\+\_\+resolution\+\_\+clock\+::time\+\_\+point {\bfseries t\+\_\+end}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file contains a C++ program which represents the robot executing its behaviours based on these tasks (1.\+Autonomously reach a User entering Co-\/ordinates X and Y and, 2. Control or Move the robot using keyboard keys.) 
+
+\begin{DoxyAuthor}{Author}
+N\+I\+R\+M\+AL K\+U\+M\+AR R\+A\+V\+I\+K\+U\+M\+AR 5168055 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+26/09/2022
+\end{DoxyDate}
+Subscribes to\+: ~\newline
+ /move\+\_\+base/feedback initial\+\_\+position /move\+\_\+base/initial goal\+\_\+goal /scan assistance
+
+Publishes to\+: ~\newline
+ /move\+\_\+base/goal /move\+\_\+base/cancel /cmd\+\_\+vel
+
+Description \+: By this \mbox{\hyperlink{robot_8cpp}{robot.\+cpp}} file we have the above mentioned 3 publishers and subscribers, which are declared position of the goal, goal coordinates and laser scanner for manual driving assistance respectively. All these subscribers are run simultaneously by multithreading concept. So by these the robot can\+:Reach the goal autonomously -\/User enters the x and y coordinates where the robot should go.\+Publishes the goal enters to move\+\_\+base/goal. User control using keybaord User can control the robot using the list of commands (keyboard keys) and move accordingly. 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{robot_8cpp_a6a1415673ea23157efdcc7787a722e41}\label{robot_8cpp_a6a1415673ea23157efdcc7787a722e41}} 
+\index{robot.cpp@{robot.cpp}!assistance@{assistance}}
+\index{assistance@{assistance}!robot.cpp@{robot.cpp}}
+\doxysubsubsection{\texorpdfstring{assistance()}{assistance()}}
+{\footnotesize\ttfamily void assistance (\begin{DoxyParamCaption}\item[{const sensor\+\_\+msgs\+::\+Laser\+Scan\+::\+Const\+Ptr \&}]{msg }\end{DoxyParamCaption})}
+
+
+
+Assistance -\/ robot can be able to scan the path using the laser scan. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em msg} & Robot speed and assistance A\+S\+S\+I\+S\+T\+A\+N\+C\+E-\/\+In this function, with help of the geometry\+\_\+msg the robot can able to scan the path way to move freely by dividing it into three parts left, right and center. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{robot_8cpp_ab013442fae1eec9b26c422a8bd8c535d}\label{robot_8cpp_ab013442fae1eec9b26c422a8bd8c535d}} 
+\index{robot.cpp@{robot.cpp}!initial\_goal@{initial\_goal}}
+\index{initial\_goal@{initial\_goal}!robot.cpp@{robot.cpp}}
+\doxysubsubsection{\texorpdfstring{initial\_goal()}{initial\_goal()}}
+{\footnotesize\ttfamily void initial\+\_\+goal (\begin{DoxyParamCaption}\item[{const move\+\_\+base\+\_\+msgs\+::\+Move\+Base\+Action\+Goal\+::\+Const\+Ptr \&}]{msg }\end{DoxyParamCaption})}
+
+
+
+I\+N\+I\+T\+I\+AL G\+O\+AL. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em msg} & Move\+Base\+Action\+Feed\+Goal I\+N\+I\+T\+I\+AL P\+O\+S\+I\+T\+I\+O\+N-\/\+Initial\+\_\+goal -\/ This function is used to assign the x and y go-\/to coordinates of the robot. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{robot_8cpp_adb56cf48e74e2603b6206502c1b99391}\label{robot_8cpp_adb56cf48e74e2603b6206502c1b99391}} 
+\index{robot.cpp@{robot.cpp}!initial\_position@{initial\_position}}
+\index{initial\_position@{initial\_position}!robot.cpp@{robot.cpp}}
+\doxysubsubsection{\texorpdfstring{initial\_position()}{initial\_position()}}
+{\footnotesize\ttfamily void initial\+\_\+position (\begin{DoxyParamCaption}\item[{const move\+\_\+base\+\_\+msgs\+::\+Move\+Base\+Action\+Feedback\+::\+Const\+Ptr \&}]{msg }\end{DoxyParamCaption})}
+
+
+
+initial position of the robot. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em msg} & Move\+Base\+Action\+Feedback I\+N\+I\+T\+I\+AL P\+O\+S\+I\+T\+I\+O\+N-\/\+In this function the Initial\+\_\+position is used to calculate the difference between initial position of the robot and the go to position of the robot in terms of x and y coordinates . when the difference of x and y cords are not negative, then the entered user coordinates are sent as feedback for the robot to move to the desired position. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{robot_8cpp_ac5ca9aa62d70a5fb089b2a377e1bd282}\label{robot_8cpp_ac5ca9aa62d70a5fb089b2a377e1bd282}} 
+\index{robot.cpp@{robot.cpp}!take\_the\_wheel@{take\_the\_wheel}}
+\index{take\_the\_wheel@{take\_the\_wheel}!robot.cpp@{robot.cpp}}
+\doxysubsubsection{\texorpdfstring{take\_the\_wheel()}{take\_the\_wheel()}}
+{\footnotesize\ttfamily void take\+\_\+the\+\_\+wheel (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+T\+A\+KE T\+HE W\+H\+E\+EL -\/ manual control with enable/disable option of driving assistance. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em msg} & Robot speed and control take the wheel -\/This function allows the user to give their input in such a way that the robot can be moved correspondingly with respective keys in the keyboard. And as per the input keys, the robots linear angular velocities are changed \\
+\hline
+\end{DoxyParams}
