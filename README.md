@@ -6,6 +6,6 @@
 
 - This asssignment is done using the doxygen. [DOXYGEN](https://doxygen.nl/) is a documentation generator and static analysis tool for software source trees.
 
--  The first assignment consists of the documentation of the user interface of the RESEARCH TRACK 1 [(3rd assignment)](https://github.com/Nirmalkumar-007/RESEARCH-TRACK-ASSIGNMENT-3).
+-  The first assignment consists of the documentation of the user interface of  RESEARCH TRACK 1 [(3rd assignment)](https://github.com/Nirmalkumar-007/RESEARCH-TRACK-ASSIGNMENT-3).
 
 - The [DOCS](https://github.com/Nirmalkumar-007/RT2-ASSIGNMENT1-DOCUMENTATION/tree/master/DOCS) file consists of the documentation of the code in the following formats [Latex](https://github.com/Nirmalkumar-007/RT2-ASSIGNMENT1-DOCUMENTATION/tree/master/DOCS/latex), [html](https://github.com/Nirmalkumar-007/RT2-ASSIGNMENT1-DOCUMENTATION/tree/master/DOCS/html) and [xml](https://github.com/Nirmalkumar-007/RT2-ASSIGNMENT1-DOCUMENTATION/tree/master/DOCS/xml).
