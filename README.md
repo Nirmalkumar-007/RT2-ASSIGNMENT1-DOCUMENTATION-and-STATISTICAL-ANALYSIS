@@ -9,3 +9,13 @@
 •	The first assignment consists of the documentation of the user interface of the RESEARCH TRACK 1(3rd assignment). 
 
 •	The DOCS file consists of the documentation of the code in the following formats latex, xml & html.
+
+
+
+---
+__Advertisement :)__
+
+- __[DOCX](https://github.com/Nirmalkumar-007/RT2-ASSIGNMENT1-DOCUMENTATION/tree/master/DOCS)__ - high quality and fast image
+  resize in browser.
+- __[babelfish](https://github.com/nodeca/babelfish/)__ - developer friendly
+  i18n with plurals support and easy syntax.
