@@ -9,5 +9,3 @@
 •	The first assignment consists of the documentation of the user interface of the RESEARCH TRACK 1(3rd assignment). 
 
 •	The DOCS file consists of the documentation of the code in the following formats latex, xml & html.
-
-DOCX - high quality and fast image resize in browser.
