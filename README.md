@@ -5,3 +5,5 @@
 
 
 Doxygen is a documentation generator and static analysis tool for software source trees.
+
+The first assignment of the RESEARCH TRACK 2 consists of the documentation of the user interface. 
