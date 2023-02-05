@@ -45,6 +45,11 @@ As performance evaluators you may possibly consider:
 - the average time required to finish the circuit
 - the distance from the obstacles
 
-_CODES:_ 
--My implementation is taken from the  [RT1-assignmnet-1](https://github.com/Nirmalkumar-007/RESEARCH-TRACK-ASSIGNMENT-1)
--Professor's code is taken from [CarmineD8/python_simulator](https://github.com/CarmineD8/python_simulator/tree/rt2)
+__CODES:__
+- My implementation is taken from the  [RT1-assignmnet-1](https://github.com/Nirmalkumar-007/RESEARCH-TRACK-ASSIGNMENT-1).
+- Professor's code is taken from [CarmineD8/python_simulator](https://github.com/CarmineD8/python_simulator/tree/rt2).
+
+__ANALYSIS RESULTS:__
+- The results of the statistical analysis have been carried out and the reports are available in the folder [ANALYSIS REPORT](https://github.com/CarmineD8/python_simulator/tree/rt2).
+
+
