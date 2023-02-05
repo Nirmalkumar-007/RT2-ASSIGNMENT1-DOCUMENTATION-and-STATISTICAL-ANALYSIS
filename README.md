@@ -50,6 +50,7 @@ __CODES:__
 - Professor's code is taken from [CarmineD8/python_simulator](https://github.com/CarmineD8/python_simulator/tree/rt2).
 
 __ANALYSIS RESULTS:__
-- The results of the statistical analysis have been carried out and the reports are available in the folder [ANALYSIS REPORT](https://github.com/CarmineD8/python_simulator/tree/rt2).
+- The results of the statistical analysis have been carried out and the reports are available in the folder [STATISTICAL ANALYSIS]().
+ [REPORT]().
 
 
