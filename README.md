@@ -38,7 +38,7 @@ After entering the details in the doxywizard then the Doxygen executes the files
 ![RP](https://user-images.githubusercontent.com/93769409/216836529-ae1f4206-766e-49e4-80a0-ac4489a3aab8.jpg)
 
 __TASK:__
-Perform a statistical analysis on the first assignment, considering two different implementations (yours, and a given solution:[CarmineD8/python_simulator](https://github.com/CarmineD8/python_simulator/tree/rt2) and testing which one performs better in 
+To Perform a statistical analysis on the first assignment, considering two different implementations (mine, and a given solution of Prof. Carmine's:[CarmineD8/python_simulator](https://github.com/CarmineD8/python_simulator/tree/rt2) and testing which one performs better in 
 the circuit given, when silver tokens are randomly placed in the environment.
 As performance evaluators you may possibly consider:
 - the percentage of crashes / collisions with the walls / robot going in the wrong direction 
